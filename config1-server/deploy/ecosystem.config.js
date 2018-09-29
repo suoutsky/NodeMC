@@ -7,12 +7,11 @@
 'use strict'
 
 const path = require('path')
-console.log(require("vastify"))
 const { 
   GeneratePM2AppConfig,
   GeneratePM2DeployConfig
  } = require("vastify").DeployTool
-const name = 'account-server'
+const name = 'config-server'
 
 const processFile = {
   apps: [
@@ -28,8 +27,8 @@ const processFile = {
     production: GeneratePM2DeployConfig({
       user: 'root',
       host: 'qingf.me',
-      repo: 'https://github.com/Cecil0o0/account-server.git',
-      path: '/home/root/apps/account-server',
+      repo: 'https://github.com/Cecil0o0/config-server.git',
+      path: '/home/root/apps/config-server',
       'post-deploy': 'rm -rf ./node_modules && npm install && pm2 startOrRestart deploy/ecosystem.config.js --env production'
     })
   }

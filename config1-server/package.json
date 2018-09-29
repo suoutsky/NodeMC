@@ -1,12 +1,8 @@
 {
-  "name": "account-server",
+  "name": "config-server",
   "version": "2.0.0",
-  "description": "用户服务",
+  "description": "配置服务",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Cecil0o0/account-server.git"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:debug": "node ./src/index.js --seneca.log.all | grep plugin:define",
@@ -15,19 +11,11 @@
     "deploy:setup": "pm2 deploy deploy/ecosystem.config.js production setup",
     "deploy:update": "pm2 deploy deploy/ecosystem.config.js production update"
   },
-  "keywords": [
-    "基础服务"
-  ],
   "author": "Cecil",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Cecil0o0/account-server/issues"
-  },
-  "homepage": "https://github.com/Cecil0o0/account-server#readme",
+  "devDependencies": {},
   "dependencies": {
-    "amqplib": "^0.5.2",
-    "mongoose": "^5.1.2",
-    "vastify": "^1.2.9"
-  },
-  "devDependencies": {}
+    "bluebird": "^3.5.1",
+    "vastify": "^1.2.8"
+  }
 }

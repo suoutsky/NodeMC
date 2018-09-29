@@ -1,6 +1,5 @@
 dependencies:
-  amqplib: 0.5.2
-  mongoose: 5.2.18
+  bluebird: 3.5.2
   vastify: 1.3.0
 packages:
   /accepts/1.3.5:
@@ -13,19 +12,6 @@ packages:
     resolution:
       integrity: sha1-63d99gEXI6OxTopywIBcjoZ0a9I=
       tarball: 'http://registry.npm.taobao.org/accepts/download/accepts-1.3.5.tgz'
-  /amqplib/0.5.2:
-    dependencies:
-      bitsyntax: 0.0.4
-      bluebird: 3.5.2
-      buffer-more-ints: 0.0.2
-      readable-stream: 1.1.14
-      safe-buffer: 5.1.2
-    dev: false
-    engines:
-      node: '>=0.8 <=9'
-    resolution:
-      integrity: sha1-0tcxPH/6pNELzx5iUt5FkbbMe2M=
-      tarball: 'http://registry.npm.taobao.org/amqplib/download/amqplib-0.5.2.tgz'
   /any-promise/1.3.0:
     dev: false
     resolution:
@@ -52,15 +38,6 @@ packages:
     resolution:
       integrity: sha1-9hbtqdPktmuMp/ynn2lXIsX44m8=
       tarball: 'http://registry.npm.taobao.org/backoff/download/backoff-2.5.0.tgz'
-  /bitsyntax/0.0.4:
-    dependencies:
-      buffer-more-ints: 0.0.2
-    dev: false
-    engines:
-      node: '>=0.6'
-    resolution:
-      integrity: sha1-6xDMb4K4xJDj6FaY8H6D1G4MuoI=
-      tarball: 'http://registry.npm.taobao.org/bitsyntax/download/bitsyntax-0.0.4.tgz'
   /bluebird/3.5.1:
     dev: false
     resolution:
@@ -94,11 +71,6 @@ packages:
     resolution:
       integrity: sha1-vuV9H7aodxNHGvTjK8rjbegUtbA=
       tarball: 'http://registry.npm.taobao.org/bson/download/bson-1.1.0.tgz'
-  /buffer-more-ints/0.0.2:
-    dev: false
-    resolution:
-      integrity: sha1-JrOIXRD6E9t/wBquOquHAZngEkw=
-      tarball: 'http://registry.npm.taobao.org/buffer-more-ints/download/buffer-more-ints-0.0.2.tgz'
   /bytes/3.0.0:
     dev: false
     engines:
@@ -616,14 +588,17 @@ packages:
     resolution:
       integrity: sha1-YFRkGXO1v1ta4cZ9y8+PqIKAJz0=
       tarball: 'http://registry.npm.taobao.org/mongodb/download/mongodb-3.1.6.tgz'
-  /mongoose-legacy-pluralize/1.0.2:
+  /mongoose-legacy-pluralize/1.0.2/mongoose@5.2.18:
+    dependencies:
+      mongoose: /mongoose/5.2.18/mongoose@5.2.18
     dev: false
+    id: registry.npm.taobao.org/mongoose-legacy-pluralize/1.0.2
     peerDependencies:
       mongoose: '*'
     resolution:
       integrity: sha1-O6n5H6UHtRhtOZ+0CFS/8Y+1Y+Q=
       tarball: 'http://registry.npm.taobao.org/mongoose-legacy-pluralize/download/mongoose-legacy-pluralize-1.0.2.tgz'
-  /mongoose/5.2.18:
+  /mongoose/5.2.18/mongoose@5.2.18:
     dependencies:
       async: 2.6.1
       bson: 1.0.9
@@ -631,7 +606,7 @@ packages:
       lodash.get: 4.4.2
       mongodb: 3.1.6
       mongodb-core: 3.1.5
-      mongoose-legacy-pluralize: 1.0.2
+      mongoose-legacy-pluralize: /mongoose-legacy-pluralize/1.0.2/mongoose@5.2.18
       mpath: 0.5.1
       mquery: 3.2.0
       ms: 2.0.0
@@ -641,6 +616,7 @@ packages:
     dev: false
     engines:
       node: '>=4.0.0'
+    id: registry.npm.taobao.org/mongoose/5.2.18
     resolution:
       integrity: sha1-0tq4xe0E2+eRa/dYtS9czZ2zLBw=
       tarball: 'http://registry.npm.taobao.org/mongoose/download/mongoose-5.2.18.tgz'
@@ -794,16 +770,6 @@ packages:
     resolution:
       integrity: sha1-GzJOzmtXBuFThVvBFIxlu39uoMM=
       tarball: 'http://registry.npm.taobao.org/raw-body/download/raw-body-2.3.3.tgz'
-  /readable-stream/1.1.14:
-    dependencies:
-      core-util-is: 1.0.2
-      inherits: 2.0.3
-      isarray: 0.0.1
-      string_decoder: 0.10.31
-    dev: false
-    resolution:
-      integrity: sha1-fPTFTvZI44EwhMY23SB54WbAgdk=
-      tarball: 'http://registry.npm.taobao.org/readable-stream/download/readable-stream-1.1.14.tgz'
   /readable-stream/2.3.6:
     dependencies:
       core-util-is: 1.0.2
@@ -983,11 +949,6 @@ packages:
     resolution:
       integrity: sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
       tarball: 'http://registry.npm.taobao.org/statuses/download/statuses-1.5.0.tgz'
-  /string_decoder/0.10.31:
-    dev: false
-    resolution:
-      integrity: sha1-YuIDvEF2bGwoyfyEMB2rHFMQ+pQ=
-      tarball: 'http://registry.npm.taobao.org/string_decoder/download/string_decoder-0.10.31.tgz'
   /string_decoder/1.1.1:
     dependencies:
       safe-buffer: 5.1.2
@@ -1074,7 +1035,7 @@ packages:
       consul: 0.31.0
       koa: 2.5.3
       koa-router: 7.4.0
-      mongoose: 5.2.18
+      mongoose: /mongoose/5.2.18/mongoose@5.2.18
       seneca: 3.7.0
       seneca-web: 2.2.1
       seneca-web-adapter-koa2: /seneca-web-adapter-koa2/1.1.0/koa@2.5.3+seneca-web@2.2.1
@@ -1144,6 +1105,5 @@ registry: 'https://registry.npm.taobao.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
-  amqplib: ^0.5.2
-  mongoose: ^5.1.2
-  vastify: ^1.2.9
+  bluebird: ^3.5.1
+  vastify: ^1.2.8
