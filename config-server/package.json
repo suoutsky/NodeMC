@@ -1,0 +1,21 @@
+{
+  "name": "config-server",
+  "version": "1.0.0",
+  "description": "配置服务",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:debug": "node ./src/index.js --seneca.log.all | grep plugin:define",
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js",
+    "deploy:setup": "pm2 deploy deploy/ecosystem.config.js production setup",
+    "deploy:update": "pm2 deploy deploy/ecosystem.config.js production update"
+  },
+  "author": "Cecil",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "vastify": "^1.2.8"
+  }
+}
